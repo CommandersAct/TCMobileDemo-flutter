@@ -1,10 +1,16 @@
-# TCMobileDemo-flutter
+# my_app
 
-This is a demo flutter App that uses both commandersAct plugins [TCConsent](https://github.com/CommandersAct/tc-consent-plugin) && [TCServerSide](https://github.com/CommandersAct/tcserverside-plugin)
+A new Flutter project.
 
-# SetUp : 
-Since Flutter doesn't currently fully support SPM dependencies wich we use to publish our artifact, you'll need to manually link our TCCore.xcframework for both plugins on your xcode app to be able to launch on iOS.
+## Getting Started
 
-More info here :
+This project is a starting point for a Flutter application.
 
-[xcframework Linking](https://github.com/CommandersAct/TCMobileDemo-flutter/blob/master/xcframework_linking.md)
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

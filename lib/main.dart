@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_app/MockEvents.dart';
 import 'package:tc_serverside_plugin/tc_serverside.dart';
 import 'package:tc_consent_plugin/tc_consent.dart';
+import 'package:tccore_plugin/TCUser.dart';
+import 'package:tccore_plugin/TCDebug.dart';
+import 'package:tc_serverside_plugin/TCDevice.dart';
 
 void main() {
   runApp(const MyApp());
@@ -97,6 +100,9 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                buildRedButton('Enable logging', () => {TCDebug().setDebugLevel(TCLogLevel.TCLogLevel_Verbose)} ),
+                buildRedButton('Disable logging', () => {TCDebug().setDebugLevel(TCLogLevel.TCLogLevel_None)} ),
+                buildTextButton('BreakPoint', breakpoint),
                 buildTextButton('addPermanentData', () => {serverside.addPermanentData("permanant_data_key", "permanant_value")}),
                 buildTextButton('enableRunningInBackground', () => {serverside.enableRunningInBackground()}),
                 buildTextButton('getPermanentData', () async => {print(" *- permanant data = ${await serverside.getPermanentData("permanant_data_key")}")}),
@@ -133,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 buildRedButton('Set Consent Duration',() {consent.setConsentDuration(6);} ),
                 buildRedButton('saveConsentFromPopUp',() {consent.saveConsentFromPopUp(mockConsent);}),
                 buildRedButton('saveConsent',() {consent.saveConsent(mockConsent);}),
-                buildRedButton('saveConsentFromConsentSourceWithPrivacyAction',() {consent.saveConsentFromConsentSourceWithPrivacyAction(mockConsent, ETCConsentSource.popUp, ETCConsentAction.refuseAll);}),
+                buildRedButton('saveConsentFromConsentSourceWithPrivacyAction',() {consent.saveConsentFromConsentSourceWithPrivacyAction(mockConsent, ETCConsentSource.popUp, ETCConsentAction.save);}),
                 buildRedButton('statEnterPCToVendorScreen',consent.statEnterPCToVendorScreen),
                 buildRedButton('statShowVendorScreen',consent.statShowVendorScreen),
                 buildRedButton('statViewPrivacyPoliciesFromPrivacyCenter',consent.statViewPrivacyPoliciesFromPrivacyCenter),
@@ -144,6 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 buildRedButton('setLanguage',() {consent.setLanguage("fr");}),
                 buildRedButton('getConsentAsJson',() async {
                   var savedConsent = await consent.getConsentAsJson();
+                  print("savedconsent = ${savedConsent}");
                 })
 
               ],
@@ -158,6 +165,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+  }
+
+  void breakpoint()
+  {
+    TCUser();
+    print("");
   }
 
   Container buildTextButton(String label, Function() f) {
