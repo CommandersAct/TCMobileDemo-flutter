@@ -1,16 +1,19 @@
-# my_app
+# TCMobileDemo-flutter
 
-A new Flutter project.
 
-## Getting Started
+This is a flutter demo app that implements both [TCServerSide](https://github.com/CommandersAct/tcserverside-flutter-plugin) && [TCConsent](https://github.com/CommandersAct/tcconsent-flutter-plugin/) plugins. 
 
-This project is a starting point for a Flutter application.
+Have a look at the code inside lib/Main.dart. More importantly, you'll need to read the native documentation for full details.
 
-A few resources to get you started if this is your first Flutter project:
+This app displays buttons to interact with the SDK. You can check the Xcode console or Android Logcat for SDK logging.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Support & Contact : 
+
+Support : support@commandersact.com
+
+http://www.commandersact.com
+
+Commanders Act | 7b rue taylor - 75010 PARIS - France
+
+![Commanders Act logo](res/ca_logo.png)
