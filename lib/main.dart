@@ -62,7 +62,11 @@ class _MyHomePageState extends State<MyHomePage> {
   var PRIVACY_ID = 72;
   var mockConsent = {"PRIVACY_CAT_10007": "1", "PRIVACY_CAT_31": "0", "PRIVACY_CAT_10014": "0", "PRIVACY_VEN_2": "0", "PRIVACY_CAT_10019": "0", "PRIVACY_VEN_1": "1"};
 
-
+  void setTCUserCustomValues()
+  {
+    TCUser().addAdditionalProperty("custom_key", "custom_value");
+    TCUser().addAdditionalPropertyWithIntValue("custom_int_key", 31);
+  }
   @override
   void initState() {
     super.initState();
@@ -100,6 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                buildRedButton('set TCUser custom vals', () => {setTCUserCustomValues()} ),
                 buildRedButton('Enable logging', () => {TCDebug().setDebugLevel(TCLogLevel.TCLogLevel_Verbose)} ),
                 buildRedButton('Disable logging', () => {TCDebug().setDebugLevel(TCLogLevel.TCLogLevel_None)} ),
                 buildTextButton('BreakPoint', breakpoint),
