@@ -35,12 +35,12 @@ dependencies:
   tc_serverside_plugin:
     git:
       url: https://github.com/CommandersAct/tcserverside-flutter-plugin.git
-      ref: 1.1.2
+      ref: 1.2.0
 
   tc_consent_plugin:
     git:
       url: https://github.com/CommandersAct/tcconsent-flutter-plugin.git
-      ref: 1.4.2
+      ref: 1.5.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
