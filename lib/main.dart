@@ -70,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
+    TCDebug().setDebugLevel(TCLogLevel.TCLogLevel_Assert);
     serverside.initServerSide(3311, "sourceKey");
     consent.setSiteIDPrivacyID(3311, 07);
   }

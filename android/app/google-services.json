@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "789238011874",
+    "project_id": "tcdemo-c485a",
+    "storage_bucket": "tcdemo-c485a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789238011874:android:93bde3428709c6fbf90bbb",
+        "android_client_info": {
+          "package_name": "com.tagcommander.lib.tcdemo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgQfq6qq7MjxVSyqcALAX0PWFJr9yJAl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

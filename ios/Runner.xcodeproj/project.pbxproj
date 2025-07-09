@@ -18,6 +18,8 @@
 		EB04D16A29CC8EC10065025F /* vendor-list.json in Resources */ = {isa = PBXBuildFile; fileRef = EB04D16629CC8EC10065025F /* vendor-list.json */; };
 		EB04D16B29CC8EC10065025F /* google-atp-list.json in Resources */ = {isa = PBXBuildFile; fileRef = EB04D16729CC8EC10065025F /* google-atp-list.json */; };
 		EB04D16C29CC8EC10065025F /* privacy.json in Resources */ = {isa = PBXBuildFile; fileRef = EB04D16829CC8EC10065025F /* privacy.json */; };
+		EBD4861D2E1435E0009DF500 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBD4861C2E1435E0009DF500 /* FirebaseAnalytics */; };
+		EBD4861F2E143A11009DF500 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBD4861E2E143A11009DF500 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,7 @@
 		EB04D16629CC8EC10065025F /* vendor-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "vendor-list.json"; sourceTree = "<group>"; };
 		EB04D16729CC8EC10065025F /* google-atp-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "google-atp-list.json"; sourceTree = "<group>"; };
 		EB04D16829CC8EC10065025F /* privacy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = privacy.json; sourceTree = "<group>"; };
+		EBD4861E2E143A11009DF500 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FEB592FA9CB5DDAD88F24061 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD4861D2E1435E0009DF500 /* FirebaseAnalytics in Frameworks */,
 				4CF824DB4C4032AEBC485A27 /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +107,7 @@
 				EB04D16629CC8EC10065025F /* vendor-list.json */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
+				EBD4861E2E143A11009DF500 /* GoogleService-Info.plist */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
 				97C147021CF9000F007C117D /* Info.plist */,
 				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
@@ -171,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
+			packageReferences = (
+				EBD4861B2E1435E0009DF500 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,6 +195,7 @@
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				EB04D16A29CC8EC10065025F /* vendor-list.json in Resources */,
+				EBD4861F2E143A11009DF500 /* GoogleService-Info.plist in Resources */,
 				EB04D16C29CC8EC10065025F /* privacy.json in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				EB04D16929CC8EC10065025F /* purposes-fr.json in Resources */,
@@ -367,7 +376,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.myApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tagcommander.lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -496,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.myApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tagcommander.lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -519,7 +528,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.myApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tagcommander.lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -551,6 +560,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EBD4861B2E1435E0009DF500 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EBD4861C2E1435E0009DF500 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBD4861B2E1435E0009DF500 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 97C146E61CF9000F007C117D /* Project object */;
 }

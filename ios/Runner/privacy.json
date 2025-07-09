@@ -1,7 +1,7 @@
 {
     "information": {
         "update": "2021-03-12",
-        "version": "121",
+        "version": "124",
         "vendors": "15,48,501,506,520,539,512,895",
         "consentDurationInMonths": "6",
         "significantChanges": "true"
@@ -169,5 +169,15 @@
             "linkcolor": "#0A78E3"
         },
         "order": ["Custom", "IAB"]
-    }
+    },
+    "google_consent_mode": {
+            "use_consent_mode": true,
+            "infer_ad_from_tcf": false,
+            "category_mapping": {
+                "ad_storage": 1,
+                "ad_user_data": 2,
+                "ad_personalization": 3,
+                "analytics_storage": 4
+            }
+        }
 }
